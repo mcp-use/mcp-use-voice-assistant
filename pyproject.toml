@@ -44,8 +44,6 @@ dev = [
     "mypy>=1.0",
 ]
 
-[project.scripts]
-mcp-voice-assistant = "voice_assistant:main"
 
 [project.urls]
 Homepage = "https://github.com/yourusername/mcp-voice-assistant"

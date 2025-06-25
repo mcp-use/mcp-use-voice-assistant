@@ -171,19 +171,22 @@ config = {
 ```
 
 
-### Command Line
+### Running the Assistant
 
-After installation, you can run the assistant directly:
+After installation, run the assistant:
 
 ```bash
-# Using environment variables from .env file
-mcp-voice-assistant
+# Using uv
+uv run python voice_assistant/agent.py
+
+# Or using python directly
+python voice_assistant/agent.py
 
 # Override specific settings via command line
-mcp-voice-assistant --model gpt-3.5-turbo --silence-threshold 300
+python voice_assistant/agent.py --model gpt-3.5-turbo --silence-threshold 300
 
 # Provide all settings via command line (no .env needed)
-mcp-voice-assistant \
+python voice_assistant/agent.py \
   --openai-api-key YOUR_KEY \
   --elevenlabs-api-key YOUR_ELEVENLABS_KEY \
   --model gpt-4 \
@@ -192,7 +195,7 @@ mcp-voice-assistant \
   --silence-duration 1.5
 
 # See all available options
-mcp-voice-assistant --help
+python voice_assistant/agent.py --help
 ```
 
 **Note**: Command-line arguments take precedence over environment variables.
