@@ -1,6 +1,6 @@
 <h1 align="center"> MCP Voice Assistant </h1>
-
-<div align="center" style="margin: 0 auto; max-width: 50%;">
+<div align="center" style="margin: 0 auto; max-width: 20%;">
+<h2 align="center">built with</h2>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="static/logo_white.svg">
     <source media="(prefers-color-scheme: light)" srcset="static/logo_black.svg">
@@ -11,13 +11,11 @@
 <p align="center">
     <a href="https://pypi.org/project/mcp_use/" alt="PyPI Version">
         <img src="https://img.shields.io/pypi/v/mcp_use.svg"/></a>
-    <a href="https://pypi.org/project/mcp_use/" alt="PyPI Downloads">
-        <img src="https://static.pepy.tech/badge/mcp-use" /></a>
     <a href="https://pypi.org/project/mcp_use/" alt="Python Versions">
         <img src="https://img.shields.io/pypi/pyversions/mcp_use.svg" /></a>
-    <a href="https://docs.mcp-use.io" alt="Documentation">
-        <img src="https://img.shields.io/badge/docs-mcp--use.io-blue" /></a>
-    <a href="https://mcp-use.io" alt="Website">
+    <a href="https://docs.mcp-use.com" alt="Documentation">
+        <img src="https://img.shields.io/badge/docs-mcp--use.com-blue" /></a>
+    <a href="https://mcp-use.com" alt="Website">
         <img src="https://img.shields.io/badge/website-mcp--use.io-blue" /></a>
     <a href="https://github.com/pietrozullo/mcp-use/blob/main/LICENSE" alt="License">
         <img src="https://img.shields.io/github/license/pietrozullo/mcp-use" /></a>
@@ -34,8 +32,6 @@
     <a href="https://discord.gg/XkNkSkMz3V" alt="Discord">
         <img src="https://dcbadge.limes.pink/api/server/XkNkSkMz3V?style=flat" /></a>
 </p>
-
-# MCP Voice Assistant
 
 A voice-enabled AI personal assistant that leverages the Model Context Protocol (MCP) to integrate multiple tools and services through natural voice interactions.
 
