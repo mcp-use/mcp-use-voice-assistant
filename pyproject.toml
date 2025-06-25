@@ -1,0 +1,91 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-voice-assistant"
+version = "0.1.0"
+description = "Voice-enabled AI assistant with MCP (Model Context Protocol) integration"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "mcp-use", email = "founders@mcp-use.com"},
+]
+keywords = ["voice-assistant", "mcp", "ai", "speech-recognition", "text-to-speech"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "mcp-use>=0.1.0",
+    "openai>=1.0.0",
+    "pyaudio>=0.2.11",
+    "pygame>=2.0.0",
+    "numpy>=1.21.0",
+    "pyttsx3>=2.90",
+    "elevenlabs>=1.0.0",
+    "python-dotenv>=0.19.0",
+    "langchain-openai>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+]
+
+[project.scripts]
+mcp-voice-assistant = "voice_assistant:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/mcp-voice-assistant"
+Documentation = "https://github.com/yourusername/mcp-voice-assistant#readme"
+Repository = "https://github.com/yourusername/mcp-voice-assistant"
+Issues = "https://github.com/yourusername/mcp-voice-assistant/issues"
+
+[tool.setuptools]
+packages = ["voice_assistant"]
+
+[tool.setuptools.package-data]
+voice_assistant = ["*.md"]
+
+[tool.black]
+line-length = 120
+target-version = ["py38", "py39", "py310", "py311", "py312"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py38"
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501", # line too long (handled by black)
+    "B008", # do not perform function calls in argument defaults
+    "C901", # too complex
+]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
